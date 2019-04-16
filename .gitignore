@@ -11,7 +11,7 @@ HELP.md
 .settings
 .springBeans
 .sts4-cache 
-.class
+*.class
 
 ### IntelliJ IDEA ###
 .idea
