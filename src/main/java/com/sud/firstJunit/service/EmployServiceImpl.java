@@ -30,4 +30,14 @@ public class EmployServiceImpl implements EmployeeService {
 		return mapper.map(emp, Employee.class);
 	}
 
+	private EmployeeEntity mapToEntity(Employee employee) {
+		return mapper.map(employee,EmployeeEntity.class);
+	}
+	
+	@Override
+	public Employee createNewEmployee(Employee employee) {
+		EmployeeEntity empEntity = mapToEntity(employee);
+		return mapToEmployee(employeeDao.save(empEntity));
+	}
+
 }
